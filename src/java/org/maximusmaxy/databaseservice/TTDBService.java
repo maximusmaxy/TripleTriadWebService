@@ -36,8 +36,8 @@ public class TTDBService {
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Triple_Triad_Database", "root", "");
             System.out.println("Getting Statement");
             statement = connection.prepareStatement("select collection from users "
-                    + "where username = ? "
-                    + "and password = ?;");
+                                                  + "where username = ? "
+                                                  + "and password = ?;");
             System.out.println("setting prepared statement");
             statement.setString(1, username);
             statement.setString(2, password);
